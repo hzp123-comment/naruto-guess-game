@@ -31,11 +31,11 @@ FROM node:22-bookworm-slim AS runtime
 ENV NODE_ENV=production \
     DB_CLIENT=sqlite \
     DB_URL=/tmp/naruto-guess.sqlite3 \
-    PORT=3000 \
     REDIS_REQUIRED=false \
     POW_DIFFICULTY=17 \
-    CORS_ORIGINS=*.onrender.com \
+    CORS_ORIGINS=* \
     TRUST_PROXY=true
+# 注意：PORT 由 Render 运行时自动注入，不在此硬编码
 
 WORKDIR /app
 

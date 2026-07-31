@@ -62,4 +62,6 @@ if (!tryRequireSqlite()) {
 
 process.chdir(ROOT);
 console.log('[bootstrap] 启动主服务...');
+console.log('[bootstrap] PORT env:', process.env.PORT);
+console.log('[bootstrap] WEB_CONCURRENCY env:', process.env.WEB_CONCURRENCY);
 require(ENTRY);
