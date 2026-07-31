@@ -20,14 +20,13 @@ vi.mock('../api/socket', () => ({ getSocket: () => socket }));
 const answer: PlayerInfo = {
   id: 1,
   nickname: 'Answer',
-  nationality: 'CN',
-  region: 'Asia',
-  team: 'Team',
-  age: 24,
-  role: 'Rifler',
-  majorChampionships: 1,
-  majorAppearances: 4,
-  isActive: true,
+  village: '木叶',
+  family_org: ['第七班'],
+  rank: '上忍',
+  status: '存活',
+  eye_technique: '写轮眼',
+  has_kekkei: true,
+  is_jinchuriki: false,
 };
 
 function guess(playerId: number, nickname: string, correct = false): GuessFeedback {
@@ -37,13 +36,13 @@ function guess(playerId: number, nickname: string, correct = false): GuessFeedba
     nickname,
     correct,
     attributes: {
-      nationality: attribute,
-      team: attribute,
-      age: { value: 24, level: attribute.level },
-      role: attribute,
-      majorChampionships: { value: 1, level: attribute.level },
-      majorAppearances: { value: 4, level: attribute.level },
-      isActive: { value: true, level: attribute.level },
+      village: attribute,
+      familyOrg: attribute,
+      rank: attribute,
+      status: attribute,
+      eyeTechnique: attribute,
+      hasKekkei: attribute,
+      isJinchuriki: attribute,
     },
   };
 }
@@ -78,11 +77,13 @@ const room: RoomState = {
     reason: 'score',
     answer: {
       nickname: answer.nickname,
-      team: answer.team,
-      nationality: answer.nationality,
-      role: answer.role,
-      majorChampionships: answer.majorChampionships,
-      majorAppearances: answer.majorAppearances,
+      village: answer.village,
+      family_org: answer.family_org,
+      rank: answer.rank,
+      status: answer.status,
+      eye_technique: answer.eye_technique,
+      has_kekkei: answer.has_kekkei,
+      is_jinchuriki: answer.is_jinchuriki,
     },
   },
   matchReplay: {
