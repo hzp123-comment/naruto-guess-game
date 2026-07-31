@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search as SearchIcon, CircleDot } from 'lucide-react';
+import { Search as SearchIcon, User } from 'lucide-react';
 import Page from '../components/Page';
 import GuessInputBar from '../components/GuessInputBar';
 import { PlayerInfoTable } from '../components/AnswerOverlay';
@@ -8,7 +8,7 @@ import { PlayerInfo } from '../types';
 import { toast } from '../components/Toast';
 import { useTranslation } from 'react-i18next';
 
-/** 查选手:底部输入 + 自动补全,选中后在上方展示选手卡片(原版布局) */
+/** 查角色:底部输入 + 自动补全,选中后在上方展示角色卡片 */
 export default function Search() {
   const { t } = useTranslation();
   const [player, setPlayer] = useState<PlayerInfo | null>(null);
@@ -44,20 +44,22 @@ export default function Search() {
         {player ? (
           <div className="card">
             <h3>
-              <CircleDot size={15} color={player.isActive ? '#16a34a' : '#9aa3b2'} />
+              <User size={15} color="#6366f1" />
               {player.nickname}
               <span className="muted" style={{ fontWeight: 400 }}>
-                {player.isActive ? t('common.active') : t('common.retired')} · {t('search.age', { age: player.age })}
+                {player.village} · {player.rank}
               </span>
             </h3>
             <PlayerInfoTable
               answer={{
                 nickname: player.nickname,
-                team: player.team,
-                nationality: `${player.nationality}(${player.region})`,
-                role: player.role,
-                majorChampionships: player.majorChampionships,
-                majorAppearances: player.majorAppearances,
+                village: player.village,
+                familyOrg: player.family_org,
+                rank: player.rank,
+                status: player.status,
+                eyeTechnique: player.eye_technique,
+                hasKekkei: player.has_kekkei,
+                isJinchuriki: player.is_jinchuriki,
               }}
             />
           </div>

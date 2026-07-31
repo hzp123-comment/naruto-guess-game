@@ -37,11 +37,13 @@ function AnswerSection({ answer }: { answer: PlayerInfo }) {
       <PlayerInfoTable
         answer={{
           nickname: answer.nickname,
-          team: answer.team,
-          nationality: `${answer.nationality}(${answer.region})`,
-          role: answer.role,
-          majorChampionships: answer.majorChampionships,
-          majorAppearances: answer.majorAppearances,
+          village: answer.village,
+          familyOrg: answer.family_org,
+          rank: answer.rank,
+          status: answer.status,
+          eyeTechnique: answer.eye_technique,
+          hasKekkei: answer.has_kekkei,
+          isJinchuriki: answer.is_jinchuriki,
         }}
       />
     </section>
