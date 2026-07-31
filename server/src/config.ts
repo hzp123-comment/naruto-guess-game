@@ -65,10 +65,17 @@ export const config = {
     websiteId: process.env.UMAMI_WEBSITE_ID,
     scriptUrl: process.env.UMAMI_SCRIPT_URL,
   }),
-  corsOrigins: (process.env.CORS_ORIGINS || 'http://localhost:5173,http://10.29.138.171:5173,*.loca.lt,*.onrender.com')
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean),
+  corsOrigins: (() => {
+    const raw = process.env.CORS_ORIGINS;
+    if (!raw || raw === 'auto') {
+      // Render/反向代理默认：允许所有
+      return ['*'];
+    }
+    return raw
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean);
+  })(),
 };
 
 export function validateProductionConfig(): void {

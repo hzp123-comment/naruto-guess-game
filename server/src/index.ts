@@ -47,13 +47,16 @@ const CLOUDFLARE_INSIGHTS_BEACON_ORIGIN = 'https://cloudflareinsights.com';
 
 process.on('unhandledRejection', (reason) => {
   if (isRedisTimeoutError(reason)) {
-    console.error('[server:redis-timeout-unhandled]', reason);
+    console.warn('[server:redis-timeout-unhandled]', reason);
     return;
   }
   console.error('[server:unhandled-rejection]', reason);
-  setImmediate(() => {
-    throw reason instanceof Error ? reason : new Error(String(reason));
-  });
+});
+process.on('uncaughtException', (err) => {
+  console.error('[server:uncaught-exception]', err);
+});
+process.on('uncaughtExceptionMonitor', (err, origin) => {
+  console.error('[server:uncaught-exception-monitor]', origin, err);
 });
 
 function withTimeout<T>(promise: Promise<T>, timeoutMs: number, onTimeout: () => void): Promise<T> {
