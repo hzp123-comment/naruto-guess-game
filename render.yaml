@@ -9,8 +9,6 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 3000
       - key: DB_CLIENT
         value: sqlite
       - key: DB_URL
@@ -20,7 +18,8 @@ services:
       - key: POW_DIFFICULTY
         value: "17"
       - key: CORS_ORIGINS
-        value: "*.onrender.com"
+        value: "*"
       - key: TRUST_PROXY
         value: "true"
     healthCheckPath: /api/health
+    autoDeploy: true
