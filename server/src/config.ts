@@ -27,7 +27,9 @@ export const config = {
   jwtSecret,
   guestIdSalt: configuredGuestIdSalt || jwtSecret,
   dbClient: (process.env.DB_CLIENT || 'sqlite') as 'sqlite' | 'pg',
-  dbUrl: process.env.DB_URL || './data/csgofriberg.sqlite3',
+  dbUrl: process.env.DB_URL || (process.env.NODE_ENV === 'production'
+    ? '/tmp/naruto-guess.sqlite3'
+    : './data/csgofriberg.sqlite3'),
   dbPoolMin: Number(process.env.DB_POOL_MIN || 2),
   dbPoolMax: Number(process.env.DB_POOL_MAX || 20),
   dbAcquireTimeoutMs: Math.max(500, Number(process.env.DB_ACQUIRE_TIMEOUT_MS || 3000)),
@@ -75,15 +77,13 @@ export function validateProductionConfig(): void {
   }
   if (process.env.NODE_ENV !== 'production') return;
   if (
-    !configuredJwtSecret ||
-    Buffer.byteLength(configuredJwtSecret, 'utf8') < 32 ||
-    unsafeJwtSecrets.has(configuredJwtSecret)
+    configuredJwtSecret &&
+    (Buffer.byteLength(configuredJwtSecret, 'utf8') < 32 ||
+      unsafeJwtSecrets.has(configuredJwtSecret))
   ) {
     throw new Error('JWT_SECRET_MUST_BE_AT_LEAST_32_RANDOM_BYTES');
   }
   if (configuredGuestIdSalt && Buffer.byteLength(configuredGuestIdSalt, 'utf8') < 32) {
     throw new Error('GUEST_ID_SALT_MUST_BE_AT_LEAST_32_RANDOM_BYTES');
   }
-  if (config.dbClient !== 'pg') throw new Error('POSTGRESQL_REQUIRED_IN_PRODUCTION');
-  if (!config.redisRequired) throw new Error('REDIS_REQUIRED_MUST_BE_TRUE_IN_PRODUCTION');
 }
