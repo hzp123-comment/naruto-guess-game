@@ -24,7 +24,7 @@ COPY client client
 COPY server server
 
 RUN pnpm build \
- && pnpm --filter server deploy --prod /runtime/server
+ && pnpm --filter server deploy --prod --legacy /runtime/server
 
 FROM node:22-bookworm-slim AS runtime
 
