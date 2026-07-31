@@ -25,7 +25,7 @@ export async function seedPlayersIfEmpty(): Promise<void> {
   console.log(`[seed] 已导入 ${rows.length} 名角色`);
 }
 
-async function backfillEasyPlayers(): Promise<void> {
+export async function backfillEasyPlayers(): Promise<void> {
   await db.transaction(async (trx) => {
     const applied = await trx('app_migrations').where({ name: 'naruto-easy-players' }).first();
     if (applied) return;
