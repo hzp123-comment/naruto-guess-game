@@ -14,7 +14,7 @@ services:
       - key: DB_CLIENT
         value: sqlite
       - key: DB_URL
-        value: /data/csgofriberg.sqlite3
+        value: /tmp/naruto-guess.sqlite3
       - key: REDIS_REQUIRED
         value: false
       - key: POW_DIFFICULTY
@@ -23,6 +23,4 @@ services:
         value: auto
       - key: TRUST_PROXY
         value: "true"
-    persistentPaths:
-      - /data
     healthCheckPath: /api/health
