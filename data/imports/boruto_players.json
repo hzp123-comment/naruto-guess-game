@@ -1,0 +1,2142 @@
+[
+  {
+    "id": 1,
+    "name": "油女志乃",
+    "village": "木叶",
+    "family_org": [
+      "红班"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 2,
+    "name": "秋道丁次",
+    "village": "木叶",
+    "family_org": [
+      "阿斯玛班"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 3,
+    "name": "蓝色B",
+    "village": "云隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 4,
+    "name": "文福",
+    "village": "砂隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 5,
+    "name": "千代婆婆",
+    "village": "砂隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 6,
+    "name": "长十郎",
+    "village": "雾隐",
+    "family_org": [
+      "雾隐七人众"
+    ],
+    "rank": "影级",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 7,
+    "name": "迪达拉",
+    "village": "岩隐",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 8,
+    "name": "风",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "下忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 9,
+    "name": "我爱罗",
+    "village": "砂隐",
+    "family_org": [
+      "砂隐三人组"
+    ],
+    "rank": "影级",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 10,
+    "name": "迈特凯",
+    "village": "木叶",
+    "family_org": [
+      "凯班"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 11,
+    "name": "白",
+    "village": "雾隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 12,
+    "name": "汉",
+    "village": "岩隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 13,
+    "name": "半藏",
+    "village": "雨隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 14,
+    "name": "春野樱",
+    "village": "木叶",
+    "family_org": [
+      "木叶第七班"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 15,
+    "name": "旗木卡卡西",
+    "village": "木叶",
+    "family_org": [
+      "木叶第七班",
+      "木叶暗部"
+    ],
+    "rank": "影级",
+    "status": "存活",
+    "eye_technique": "写轮眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 16,
+    "name": "飞段",
+    "village": "其他",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "失踪",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 17,
+    "name": "干柿鬼鲛",
+    "village": "雾隐",
+    "family_org": [
+      "晓组织",
+      "雾隐七人众"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 18,
+    "name": "鬼灯水月",
+    "village": "雾隐",
+    "family_org": [
+      "晓组织",
+      "鹰小队"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 19,
+    "name": "日向花火",
+    "village": "木叶",
+    "family_org": [
+      "日向家族"
+    ],
+    "rank": "下忍",
+    "status": "存活",
+    "eye_technique": "白眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 20,
+    "name": "日向日差",
+    "village": "木叶",
+    "family_org": [
+      "日向家族"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "白眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 21,
+    "name": "日向雏田",
+    "village": "木叶",
+    "family_org": [
+      "红班"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "白眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 22,
+    "name": "日向日差",
+    "village": "木叶",
+    "family_org": [
+      "日向家族"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "白眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 23,
+    "name": "日向宁次",
+    "village": "木叶",
+    "family_org": [
+      "日向家族",
+      "凯班"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "白眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 24,
+    "name": "犬冢牙",
+    "village": "木叶",
+    "family_org": [
+      "红班"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 25,
+    "name": "自来也",
+    "village": "木叶",
+    "family_org": [
+      "木叶三忍"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 26,
+    "name": "角都",
+    "village": "其他",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 27,
+    "name": "角都搭档",
+    "village": "其他",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 28,
+    "name": "勘九郎",
+    "village": "砂隐",
+    "family_org": [
+      "砂隐三人组"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 29,
+    "name": "矢仓",
+    "village": "雾隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 30,
+    "name": "鬼童丸",
+    "village": "音隐",
+    "family_org": [
+      "音隐五人众"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 31,
+    "name": "奇拉比",
+    "village": "云隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 32,
+    "name": "君麻吕",
+    "village": "音隐",
+    "family_org": [
+      "音隐五人众"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 33,
+    "name": "小南",
+    "village": "雨隐",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 34,
+    "name": "黑土",
+    "village": "岩隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 35,
+    "name": "李洛克",
+    "village": "木叶",
+    "family_org": [
+      "凯班"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 36,
+    "name": "桃地再不斩",
+    "village": "雾隐",
+    "family_org": [
+      "雾隐七人众"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 37,
+    "name": "长门",
+    "village": "雨隐",
+    "family_org": [
+      "漩涡家族",
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "轮回眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 38,
+    "name": "漩涡面麻",
+    "village": "木叶",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 39,
+    "name": "波风水门",
+    "village": "木叶",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 40,
+    "name": "奈良鹿丸",
+    "village": "木叶",
+    "family_org": [
+      "阿斯玛班"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 41,
+    "name": "二位由木人",
+    "village": "云隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 42,
+    "name": "大野木",
+    "village": "岩隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 43,
+    "name": "大蛇丸",
+    "village": "木叶",
+    "family_org": [
+      "晓组织",
+      "木叶三忍"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 44,
+    "name": "大筒木羽衣",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 45,
+    "name": "大筒木羽村",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 46,
+    "name": "大筒木辉夜",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "失踪",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 47,
+    "name": "罗砂",
+    "village": "砂隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 48,
+    "name": "老紫",
+    "village": "岩隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 49,
+    "name": "佐井",
+    "village": "木叶",
+    "family_org": [
+      "木叶第七班",
+      "根"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 50,
+    "name": "猿飞阿斯玛",
+    "village": "木叶",
+    "family_org": [
+      "猿飞一族",
+      "阿斯玛班"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 51,
+    "name": "猿飞日斩",
+    "village": "木叶",
+    "family_org": [
+      "猿飞一族"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 52,
+    "name": "赤砂之蝎",
+    "village": "砂隐",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 53,
+    "name": "千手柱间",
+    "village": "木叶",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 54,
+    "name": "千手扉间",
+    "village": "木叶",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 55,
+    "name": "静音",
+    "village": "木叶",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 56,
+    "name": "多由也",
+    "village": "音隐",
+    "family_org": [
+      "音隐五人众"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 57,
+    "name": "手鞠",
+    "village": "砂隐",
+    "family_org": [
+      "砂隐三人组"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 58,
+    "name": "天天",
+    "village": "木叶",
+    "family_org": [
+      "凯班"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 59,
+    "name": "照美冥",
+    "village": "雾隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 60,
+    "name": "纲手",
+    "village": "木叶",
+    "family_org": [
+      "木叶三忍"
+    ],
+    "rank": "影级",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 61,
+    "name": "宇智波富岳",
+    "village": "木叶",
+    "family_org": [
+      "宇智波家族"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "写轮眼",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 62,
+    "name": "宇智波鼬",
+    "village": "木叶",
+    "family_org": [
+      "宇智波家族",
+      "晓组织",
+      "木叶暗部"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "写轮眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 63,
+    "name": "宇智波斑",
+    "village": "木叶",
+    "family_org": [
+      "宇智波家族",
+      "晓组织"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "轮回眼",
+    "has_kekkei": true,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 64,
+    "name": "宇智波美琴",
+    "village": "木叶",
+    "family_org": [
+      "宇智波家族"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "写轮眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 65,
+    "name": "宇智波带土",
+    "village": "木叶",
+    "family_org": [
+      "宇智波家族",
+      "晓组织"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "轮回眼",
+    "has_kekkei": true,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 66,
+    "name": "宇智波佐助",
+    "village": "木叶",
+    "family_org": [
+      "宇智波家族",
+      "晓组织",
+      "木叶第七班",
+      "鹰小队"
+    ],
+    "rank": "影级",
+    "status": "存活",
+    "eye_technique": "轮回眼",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 67,
+    "name": "宇智波信",
+    "village": "音隐",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "写轮眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 68,
+    "name": "宇智波止水",
+    "village": "木叶",
+    "family_org": [
+      "宇智波家族",
+      "木叶暗部"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "写轮眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 69,
+    "name": "海野伊鲁卡",
+    "village": "木叶",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 70,
+    "name": "宇多田",
+    "village": "雾隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 71,
+    "name": "漩涡玖辛奈",
+    "village": "木叶",
+    "family_org": [
+      "漩涡家族"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 72,
+    "name": "漩涡面麻",
+    "village": "木叶",
+    "family_org": [
+      "漩涡家族"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 73,
+    "name": "漩涡水户",
+    "village": "木叶",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 74,
+    "name": "漩涡鸣人",
+    "village": "木叶",
+    "family_org": [
+      "漩涡家族",
+      "木叶第七班"
+    ],
+    "rank": "影级",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": true
+  },
+  {
+    "id": 75,
+    "name": "弥彦",
+    "village": "雨隐",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 76,
+    "name": "药师兜",
+    "village": "木叶",
+    "family_org": [
+      "晓组织"
+    ],
+    "rank": "下忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 77,
+    "name": "山中井野",
+    "village": "木叶",
+    "family_org": [
+      "阿斯玛班"
+    ],
+    "rank": "中忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 78,
+    "name": "大和",
+    "village": "木叶",
+    "family_org": [
+      "木叶第七班"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 79,
+    "name": "夕日红",
+    "village": "木叶",
+    "family_org": [
+      "猿飞一族",
+      "红班"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 80,
+    "name": "二代雷影",
+    "village": "云隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 81,
+    "name": "初代雷影",
+    "village": "云隐",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "影级",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 82,
+    "name": "三代雷影",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 83,
+    "name": "二代水影",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 84,
+    "name": "初代水影",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 85,
+    "name": "二代土影",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 86,
+    "name": "初代土影",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 87,
+    "name": "山中亥一",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 88,
+    "name": "奈良鹿久",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 89,
+    "name": "秋道取风",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 90,
+    "name": "犬冢爪",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 91,
+    "name": "油女志弥",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 92,
+    "name": "日向长老",
+    "village": "木叶",
+    "family_org": [
+      "日向家族"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "白眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 93,
+    "name": "猿飞琵琶湖",
+    "village": "木叶",
+    "family_org": [
+      "猿飞一族"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 94,
+    "name": "勘九郎母亲",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 95,
+    "name": "手鞠勘九郎之妹",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 96,
+    "name": "香燐",
+    "village": "其他",
+    "family_org": [
+      "漩涡家族",
+      "晓组织",
+      "鹰小队"
+    ],
+    "rank": "下忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 97,
+    "name": "重吾",
+    "village": "音隐",
+    "family_org": [
+      "晓组织",
+      "鹰小队"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": true,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 98,
+    "name": "宇智波叶月",
+    "village": "木叶",
+    "family_org": [
+      "宇智波家族"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "写轮眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 99,
+    "name": "宇智波光炮",
+    "village": "其他",
+    "family_org": [
+      "宇智波家族"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "写轮眼",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 100,
+    "name": "长门母亲",
+    "village": "雨隐",
+    "family_org": [
+      "漩涡家族"
+    ],
+    "rank": "上忍",
+    "status": "阵亡",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 101,
+    "name": "长门父亲",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 102,
+    "name": "旗木朔茂",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 103,
+    "name": "干柿鬼鲛之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 104,
+    "name": "赤砂之蝎之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 105,
+    "name": "迪达拉之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 106,
+    "name": "飞段之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 107,
+    "name": "角都之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 108,
+    "name": "山中亥一之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 109,
+    "name": "奈良鹿久之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 110,
+    "name": "秋道取风之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 111,
+    "name": "犬冢爪之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 112,
+    "name": "油女志弥之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 113,
+    "name": "日向一族之长",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 114,
+    "name": "猿飞一族之长",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 115,
+    "name": "纲手之祖父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 116,
+    "name": "自来也之师",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 117,
+    "name": "大蛇丸之师",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 118,
+    "name": "夕日红之祖母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 119,
+    "name": "迈特凯之舅",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 120,
+    "name": "李洛克之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 121,
+    "name": "天天之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 122,
+    "name": "海野伊鲁卡之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 123,
+    "name": "静音之祖母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 124,
+    "name": "月光疾风之弟",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 125,
+    "name": "卯月夕颜之姊",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 126,
+    "name": "志村团藏之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 127,
+    "name": "千代婆婆之妹",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 128,
+    "name": "马基之师",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 129,
+    "name": "长十郎之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 130,
+    "name": "照美冥之姐",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 131,
+    "name": "黑土之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 132,
+    "name": "大野木之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 133,
+    "name": "汉之师",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 134,
+    "name": "老紫之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 135,
+    "name": "蓝色B之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 136,
+    "name": "二位由木人之姐",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 137,
+    "name": "波风水门之师",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 138,
+    "name": "漩涡玖辛奈之妹",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 139,
+    "name": "漩涡水户之叔",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 140,
+    "name": "长门之叔父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 141,
+    "name": "弥彦之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 142,
+    "name": "小南之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 143,
+    "name": "半藏之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 144,
+    "name": "桃地再不斩之弟",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 145,
+    "name": "白之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 146,
+    "name": "鬼灯水月之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 147,
+    "name": "香燐之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 148,
+    "name": "重吾之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 149,
+    "name": "君麻吕之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 150,
+    "name": "多由也之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 151,
+    "name": "鬼童丸之弟",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 152,
+    "name": "左近之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 153,
+    "name": "药师兜之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 154,
+    "name": "千代婆婆之孙",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 155,
+    "name": "马基之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 156,
+    "name": "长十郎之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 157,
+    "name": "照美冥之弟",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 158,
+    "name": "黑土之父",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 159,
+    "name": "大野木之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 160,
+    "name": "汉之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 161,
+    "name": "老紫之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 162,
+    "name": "蓝色B之母",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  },
+  {
+    "id": 163,
+    "name": "二位由木人之兄",
+    "village": "其他",
+    "family_org": [
+      "其他"
+    ],
+    "rank": "上忍",
+    "status": "存活",
+    "eye_technique": "无",
+    "has_kekkei": false,
+    "is_jinchuriki": false
+  }
+]

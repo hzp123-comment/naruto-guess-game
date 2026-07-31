@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: naruto-guess-game
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DB_CLIENT
+        value: sqlite
+      - key: DB_URL
+        value: /data/csgofriberg.sqlite3
+      - key: REDIS_REQUIRED
+        value: false
+      - key: POW_DIFFICULTY
+        value: "17"
+      - key: CORS_ORIGINS
+        value: auto
+      - key: TRUST_PROXY
+        value: "true"
+    persistentPaths:
+      - /data
+    healthCheckPath: /api/health

@@ -1,0 +1,297 @@
+/* =====================================================================
+   火影忍者主题 - 木叶风格
+   卷轴质感 + 暖色调 + 木叶元素
+   ===================================================================== */
+
+:root {
+  --naruto-bg: #f5f0e8;
+  --naruto-paper: #faf6ef;
+  --naruto-ink: #2a1f14;
+  --naruto-gold: #c9a84c;
+  --naruto-gold-dark: #a88832;
+  --naruto-red: #c44536;
+  --naruto-green: #5a7247;
+  --naruto-orange: #e87c3b;
+  --naruto-brown: #6b4423;
+  --naruto-cloud: #e8e0d0;
+}
+
+/* 木叶主题 - 覆盖浅色调 */
+html:not([data-theme='blast']) body {
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(201, 168, 76, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(196, 69, 54, 0.05), transparent 40%),
+    var(--naruto-bg);
+}
+
+html:not([data-theme='blast']) body::before {
+  background:
+    radial-gradient(circle at 26% 30%, rgba(201, 168, 76, 0.12), transparent 18%),
+    radial-gradient(circle at 74% 64%, rgba(90, 114, 71, 0.08), transparent 22%);
+}
+
+/* 木叶文字颜色 */
+html:not([data-theme='blast']) .title,
+html:not([data-theme='blast']) .home-hero h1 {
+  color: var(--naruto-ink);
+}
+
+html:not([data-theme='blast']) .home-hero h1 {
+  text-shadow: 3px 3px 0 var(--naruto-gold);
+}
+
+/* 木叶按钮 */
+html:not([data-theme='blast']) .btn {
+  background: var(--naruto-gold);
+  color: var(--naruto-ink);
+  box-shadow: 0 4px 12px rgba(168, 136, 50, 0.3);
+  font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+}
+
+html:not([data-theme='blast']) .btn:hover:not(:disabled) {
+  background: var(--naruto-gold-dark);
+  color: #fff;
+}
+
+html:not([data-theme='blast']) .btn-success,
+html:not([data-theme='blast']) .btn-green { 
+  background: var(--naruto-green); 
+  color: #fff; 
+}
+
+html:not([data-theme='blast']) .btn-danger,
+html:not([data-theme='blast']) .btn-red { 
+  background: var(--naruto-red); 
+  color: #fff; 
+}
+
+/* 木叶卡片 - 卷轴质感 */
+html:not([data-theme='blast']) .card {
+  border-color: var(--naruto-gold);
+  background: linear-gradient(160deg, var(--naruto-paper) 0%, var(--naruto-cloud) 100%);
+  box-shadow: 0 8px 24px rgba(107, 68, 35, 0.12);
+}
+
+html:not([data-theme='blast']) .card::before {
+  background: var(--naruto-gold);
+  box-shadow: 0 2px 8px rgba(201, 168, 76, 0.4);
+}
+
+html:not([data-theme='blast']) .card h3 {
+  color: var(--naruto-ink);
+}
+
+/* 木叶表格 */
+html:not([data-theme='blast']) .game-table-wrap {
+  border-color: var(--naruto-gold);
+  background: var(--naruto-paper);
+}
+
+html:not([data-theme='blast']) .game-table th {
+  color: var(--naruto-gold-dark);
+  background: var(--naruto-cloud);
+}
+
+html:not([data-theme='blast']) .game-table td:not(.correct):not(.close):not(.wrong) {
+  background: var(--naruto-paper);
+  border-color: rgba(201, 168, 76, 0.2);
+}
+
+/* 输入框 */
+html:not([data-theme='blast']) .input {
+  border-color: var(--naruto-gold);
+  background: var(--naruto-paper);
+  color: var(--naruto-ink);
+}
+
+html:not([data-theme='blast']) .input:focus {
+  border-color: var(--naruto-gold-dark);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
+}
+
+/* 首页英雄区 - 卷轴背景 */
+html:not([data-theme='blast']) .home-hero {
+  border-color: var(--naruto-gold);
+  background:
+    radial-gradient(circle at 74% 40%, rgba(201, 168, 76, 0.15), transparent 26rem),
+    radial-gradient(circle at 12% 88%, rgba(90, 114, 71, 0.1), transparent 22rem),
+    repeating-linear-gradient(180deg, transparent 0 40px, rgba(107, 68, 35, 0.03) 40px 41px),
+    linear-gradient(180deg, var(--naruto-paper), var(--naruto-cloud));
+}
+
+html:not([data-theme='blast']) .home-hero h1 {
+  background: none;
+  color: var(--naruto-ink);
+  font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+  font-weight: 900;
+}
+
+html:not([data-theme='blast']) .home-hero .hero-subtitle {
+  color: var(--naruto-brown);
+}
+
+html:not([data-theme='blast']) .hero-kicker {
+  border-left-color: var(--naruto-gold);
+  color: var(--naruto-gold-dark);
+}
+
+/* 菜单卡片 */
+html:not([data-theme='blast']) .menu-card {
+  border-color: var(--naruto-gold);
+  background: linear-gradient(160deg, var(--naruto-paper), var(--naruto-cloud));
+  box-shadow: 0 8px 24px rgba(107, 68, 35, 0.1);
+}
+
+html:not([data-theme='blast']) .menu-card::before {
+  background: var(--naruto-gold);
+  box-shadow: 0 2px 10px rgba(201, 168, 76, 0.35);
+}
+
+html:not([data-theme='blast']) .menu-card:hover {
+  border-color: var(--naruto-gold-dark);
+  background: var(--naruto-paper);
+  box-shadow: 0 12px 32px rgba(107, 68, 35, 0.15);
+}
+
+html:not([data-theme='blast']) .menu-card .menu-label {
+  color: var(--naruto-ink);
+  font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+}
+
+html:not([data-theme='blast']) .menu-description {
+  color: var(--naruto-brown);
+}
+
+/* 顶部栏 */
+html:not([data-theme='blast']) .header-bar {
+  background: rgba(250, 246, 239, 0.95);
+  border-bottom-color: var(--naruto-gold);
+}
+
+html:not([data-theme='blast']) .header-bar::after {
+  background: var(--naruto-gold);
+  box-shadow: 0 2px 10px rgba(201, 168, 76, 0.4);
+}
+
+/* 状态栏 */
+html:not([data-theme='blast']) .status-bar {
+  background: rgba(250, 246, 239, 0.9);
+  border-bottom-color: var(--naruto-gold);
+  color: var(--naruto-brown);
+}
+
+/* 底部输入栏 */
+html:not([data-theme='blast']) .input-dock {
+  border-top-color: var(--naruto-gold);
+  background: rgba(250, 246, 239, 0.98);
+}
+
+/* 自动补全列表 */
+html:not([data-theme='blast']) .autocomplete-list {
+  border-color: var(--naruto-gold);
+  background: var(--naruto-paper);
+}
+
+html:not([data-theme='blast']) .autocomplete-list li:hover,
+html:not([data-theme='blast']) .autocomplete-list li.active {
+  background: rgba(201, 168, 76, 0.15);
+}
+
+/* 对话框 */
+html:not([data-theme='blast']) .overlay-card,
+html:not([data-theme='blast']) .confirm-dialog,
+html:not([data-theme='blast']) .replay-dialog {
+  border-color: var(--naruto-gold);
+  background: linear-gradient(160deg, var(--naruto-paper), var(--naruto-cloud));
+  color: var(--naruto-ink);
+}
+
+html:not([data-theme='blast']) .overlay-card h2,
+html:not([data-theme='blast']) .confirm-heading h2 {
+  color: var(--naruto-ink);
+  font-family: 'Microsoft YaHei', '微软雅黑', sans-serif;
+}
+
+/* 反馈颜色 - 覆盖默认灰色为火影主题配色 */
+html:not([data-theme='blast']) {
+  --correct: #5a7247;
+  --close: #c9a84c;
+  --wrong: #c44536;
+}
+
+html:not([data-theme='blast']) .game-table td.correct {
+  background: rgba(90, 114, 71, 0.3) !important;
+  color: #fff;
+  border-color: var(--naruto-green);
+}
+
+html:not([data-theme='blast']) .game-table td.close {
+  background: rgba(201, 168, 76, 0.3) !important;
+  color: #fff;
+  border-color: var(--naruto-gold);
+}
+
+html:not([data-theme='blast']) .game-table td.wrong {
+  background: rgba(196, 69, 54, 0.45) !important;
+  color: #fff;
+  border-color: var(--naruto-red);
+}
+
+/* 选项按钮 */
+html:not([data-theme='blast']) .opt-btn {
+  border-color: var(--naruto-gold);
+  background: var(--naruto-paper);
+  color: var(--naruto-brown);
+}
+
+html:not([data-theme='blast']) .opt-btn:hover {
+  border-color: var(--naruto-gold-dark);
+  color: var(--naruto-gold-dark);
+}
+
+html:not([data-theme='blast']) .opt-btn.active {
+  background: var(--naruto-gold);
+  color: var(--naruto-ink);
+}
+
+/* 房间码 */
+html:not([data-theme='blast']) .room-code-display {
+  border-color: var(--naruto-gold);
+  background: var(--naruto-paper);
+  color: var(--naruto-ink);
+}
+
+/* 分数条 */
+html:not([data-theme='blast']) .score-bar {
+  border-color: var(--naruto-gold);
+  background: 
+    linear-gradient(90deg, rgba(201, 168, 76, 0.1), transparent 30%, transparent 70%, rgba(201, 168, 76, 0.1)),
+    var(--naruto-paper);
+}
+
+html:not([data-theme='blast']) .score-bar .score {
+  color: var(--naruto-ink);
+}
+
+/* 统计页面 */
+html:not([data-theme='blast']) .stats-replay-segments {
+  border-color: var(--naruto-gold);
+  background: var(--naruto-paper);
+}
+
+html:not([data-theme='blast']) .stats-replay-segments button.active {
+  background: var(--naruto-paper);
+  color: var(--naruto-gold-dark);
+}
+
+/* 链接 */
+html:not([data-theme='blast']) a:not([class]) {
+  color: var(--naruto-gold-dark);
+}
+
+/* 响应式 */
+@media (max-width: 640px) {
+  html:not([data-theme='blast']) .home-hero h1 {
+    text-shadow: 2px 2px 0 var(--naruto-gold);
+  }
+}
