@@ -61,6 +61,14 @@ async function connectWithTimeout(client: Client, timeoutMs: number): Promise<vo
 
 export async function initRedis(): Promise<boolean> {
   if (commandClient?.isReady) return true;
+  // 当 Redis 未配置或使用默认本地地址时，在无 Redis 环境下直接跳过连接尝试，
+  // 避免等待 connectTimeoutMs × 4 个连接的完整超时（Render 免费版无 Redis）。
+  const isDefaultLocalRedis = config.redisUrl.startsWith('redis://127.0.0.1')
+    || config.redisUrl.startsWith('redis://localhost');
+  if (!config.redisRequired && isDefaultLocalRedis) {
+    console.warn('[redis] 未配置 Redis，启用单实例模式（跳过连接）');
+    return false;
+  }
   commandClient = makeClient('command');
   stateClient = duplicateClient('state');
   publisherClient = duplicateClient('publisher');
