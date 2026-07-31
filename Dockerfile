@@ -11,12 +11,10 @@ WORKDIR /workspace
 
 RUN corepack enable
 
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 COPY client/package.json client/package.json
 COPY server/package.json server/package.json
 
-# Build-only dependencies stay in this disposable stage. Optional platform
-# packages are required here by tools such as esbuild.
 RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store \
     pnpm install --frozen-lockfile
 
@@ -25,34 +23,27 @@ COPY pow-wasm pow-wasm
 COPY client client
 COPY server server
 
-# The deployed server tree contains production dependencies only and omits the
-# optional SQLite driver. Only that tree is copied into the runtime image.
 RUN pnpm build \
- && pnpm --filter server deploy --prod --no-optional --legacy /runtime/server
+ && pnpm --filter server deploy --prod /runtime/server
 
-FROM gcr.io/distroless/nodejs22-debian12:nonroot AS runtime
-
-ARG OCI_SOURCE=""
-ARG OCI_REVISION=""
-ARG OCI_VERSION=""
-
-LABEL org.opencontainers.image.title="csgofriberg" \
-      org.opencontainers.image.description="PostgreSQL-only csgofriberg game server and web client" \
-      org.opencontainers.image.source=$OCI_SOURCE \
-      org.opencontainers.image.revision=$OCI_REVISION \
-      org.opencontainers.image.version=$OCI_VERSION
+FROM node:22-bookworm-slim AS runtime
 
 ENV NODE_ENV=production \
-    DB_CLIENT=pg \
-    PORT=3000
+    DB_CLIENT=sqlite \
+    DB_URL=/tmp/naruto-guess.sqlite3 \
+    PORT=3000 \
+    REDIS_REQUIRED=false \
+    POW_DIFFICULTY=17 \
+    CORS_ORIGINS=*.onrender.com \
+    TRUST_PROXY=true
 
 WORKDIR /app
 
-COPY --from=build --chown=nonroot:nonroot /runtime/server/node_modules ./server/node_modules
-COPY --from=build --chown=nonroot:nonroot /workspace/server/dist ./server/dist
-COPY --from=build --chown=nonroot:nonroot /workspace/client/dist ./client/dist
+COPY --from=build --chown=node:node /runtime/server/node_modules ./server/node_modules
+COPY --from=build --chown=node:node /workspace/server/dist ./server/dist
+COPY --from=build --chown=node:node /workspace/client/dist ./client/dist
 
-USER nonroot
+USER node
 EXPOSE 3000
 
-CMD ["server/dist/index.js"]
+CMD ["node", "server/dist/index.js"]
