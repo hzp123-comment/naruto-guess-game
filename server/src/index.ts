@@ -135,25 +135,19 @@ async function main() {
   }));
   // CORS 配置：开发环境允许所有，生产环境根据配置
   const isDev = process.env.NODE_ENV !== 'production';
-  const corsOptions = {
-    origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
-      // 开发环境或未设置 origin 的请求允许
-      if (isDev || !origin) {
-        return callback(null, true);
+  function isOriginAllowed(origin: string | undefined): boolean {
+    if (isDev || !origin) return true;
+    return config.corsOrigins.some((pattern) => {
+      if (pattern === origin) return true;
+      if (pattern.startsWith('*.')) {
+        const domain = pattern.slice(2);
+        return origin.endsWith(domain);
       }
-      // 检查 origin 是否在允许列表中
-      // 支持通配符 *.onrender.com 等
-      const allowed = config.corsOrigins.some((pattern) => {
-        if (pattern === origin) return true;
-        // 简单通配符匹配
-        if (pattern.startsWith('*.')) {
-          const domain = pattern.slice(2);
-          return origin.endsWith(domain);
-        }
-        return false;
-      });
-      callback(null, allowed);
-    },
+      return false;
+    });
+  }
+  const corsOptions = {
+    origin: isOriginAllowed,
     credentials: true,
   };
   app.use(cors(corsOptions));
@@ -162,18 +156,8 @@ async function main() {
     if (!['GET', 'HEAD', 'OPTIONS'].includes(req.method)) {
       if (!isDev) {
         const origin = req.headers.origin;
-        if (origin) {
-          const allowed = config.corsOrigins.some((pattern) => {
-            if (pattern === origin) return true;
-            if (pattern.startsWith('*.')) {
-              const domain = pattern.slice(2);
-              return origin.endsWith(domain);
-            }
-            return false;
-          });
-          if (!allowed) {
-            return res.status(403).json({ code: 'INVALID_ORIGIN' });
-          }
+        if (origin && !isOriginAllowed(origin)) {
+          return res.status(403).json({ code: 'INVALID_ORIGIN' });
         }
       }
     }
@@ -228,7 +212,7 @@ async function main() {
   app.use(errorHandler);
 
   const server = http.createServer(app);
-  const io = new Server(server, { cors: { origin: config.corsOrigins, credentials: true } });
+  const io = new Server(server, { cors: { origin: isOriginAllowed, credentials: true } });
   app.set('io', io);
   let shuttingDown = false;
   let shutdownPromise: Promise<void> | null = null;
