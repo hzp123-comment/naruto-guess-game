@@ -39,6 +39,30 @@ import type { TFunction } from 'i18next';
 import { difficultyLabel } from '../utils/difficulty';
 import PlayerStatsDialog, { type PlayerStatsView } from '../components/PlayerStatsDialog';
 
+// 从 PlayerInfo 格式（下划线）转换为 AnswerInfo 格式（驼峰）
+function toAnswerInfo(answer: {
+  nickname: string;
+  village: string;
+  family_org: string[];
+  rank: string;
+  status: string;
+  eye_technique: string;
+  has_kekkei: boolean;
+  is_jinchuriki: boolean;
+} | null): AnswerInfo | null {
+  if (!answer) return null;
+  return {
+    nickname: answer.nickname,
+    village: answer.village,
+    familyOrg: answer.family_org,
+    rank: answer.rank,
+    status: answer.status,
+    eyeTechnique: answer.eye_technique,
+    hasKekkei: answer.has_kekkei,
+    isJinchuriki: answer.is_jinchuriki,
+  };
+}
+
 interface RoundOver {
   winnerKey: string | null;
   reason: string;
@@ -283,8 +307,14 @@ export default function MultiRoom() {
     roomRef.current = state;
     setRoom(state);
     setRoundExpired(state.status !== 'playing');
-    setRoundOver(state.matchResult ? null : state.roundResult);
-    setMatchOver(state.matchResult);
+    setRoundOver(state.matchResult ? null : state.roundResult ? {
+      ...state.roundResult,
+      answer: toAnswerInfo(state.roundResult.answer),
+    } : null);
+    setMatchOver(state.matchResult ? {
+      ...state.matchResult,
+      answer: toAnswerInfo(state.matchResult.answer),
+    } : null);
     if (!state.matchResult) {
       setMatchOverVisible(false);
       setReplayRoundIndex(null);
