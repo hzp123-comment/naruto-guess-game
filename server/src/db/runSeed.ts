@@ -12,7 +12,10 @@ async function run() {
   const existingCount = await db('players').count('* as count');
   if (Number((existingCount as any)[0].count) > 0) {
     console.log('[seed] 清空现有选手数据...');
+    // 先删除依赖表，再删除主表（避免外键约束）
     await db('player_difficulties').del();
+    await db('games').del();
+    await db('match_records').del();
     await db('players').del();
   }
   
