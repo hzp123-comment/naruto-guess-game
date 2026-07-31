@@ -5,12 +5,14 @@ import AnswerOverlay from './AnswerOverlay';
 import { renderWithProviders } from '../test/render';
 
 const answer = {
-  nickname: 'friberg',
-  team: 'NIP',
-  nationality: '瑞典',
-  role: 'Rifler',
-  majorChampionships: 1,
-  majorAppearances: 12,
+  nickname: '漩涡鸣人',
+  village: '木叶',
+  familyOrg: ['第七班'],
+  rank: '影级',
+  status: '存活',
+  eyeTechnique: '无',
+  hasKekkei: false,
+  isJinchuriki: true,
 };
 
 describe('AnswerOverlay', () => {

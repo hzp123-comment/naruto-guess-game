@@ -33,15 +33,14 @@ describe('AdminPlayers', () => {
   it('downloads the complete import-compatible player JSON', async () => {
     const exportedPlayers = [{
       nickname: 'export-player',
-      nationality: '中国',
-      region: '亚洲',
-      team: 'Test',
-      age: 24,
-      role: 'Rifler',
-      major_championships: 0,
-      major_appearances: 1,
+      village: '木叶',
+      family_org: ['第七班'],
+      rank: '上忍',
+      status: '存活',
+      eye_technique: '写轮眼',
+      has_kekkei: true,
+      is_jinchuriki: false,
       difficulties: ['easy', 'normal'],
-      is_active: true,
       is_enabled: true,
     }];
     vi.mocked(api.get).mockImplementation(async (url) => {

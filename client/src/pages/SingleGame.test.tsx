@@ -136,7 +136,7 @@ describe('SingleGame UX', () => {
     renderGame('easy');
     await waitForReadyInput();
 
-    const giveup = deferred<{ data: { answer: { nickname: string; team: string; nationality: string } } }>();
+    const giveup = deferred<{ data: { answer: { nickname: string; village: string; family_org: string[] } } }>();
     post.mockReturnValueOnce(giveup.promise as never);
 
     const user = userEvent.setup();
@@ -154,7 +154,7 @@ describe('SingleGame UX', () => {
 
     giveup.resolve({
       data: {
-        answer: { nickname: 'friberg', team: 'NIP', nationality: '瑞典' },
+        answer: { nickname: '漩涡鸣人', village: '木叶', family_org: ['第七班'] },
       },
     });
     expect(await screen.findByRole('dialog')).toHaveTextContent('friberg');
@@ -167,7 +167,7 @@ describe('SingleGame UX', () => {
         data: {
           status: 'lost',
           recorded: false,
-          answer: { nickname: 'friberg', team: 'NIP', nationality: '瑞典' },
+          answer: { nickname: '漩涡鸣人', village: '木叶', family_org: ['第七班'] },
         },
       } as never);
     renderGame('easy');
