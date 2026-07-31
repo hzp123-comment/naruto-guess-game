@@ -11,7 +11,14 @@ export interface PresenceStats {
 
 export async function getPresenceStats(): Promise<PresenceStats> {
   const client = redis();
-  if (!client) throw new Error('REDIS_UNAVAILABLE');
+  if (!client) {
+    return {
+      onlineUsers: 0,
+      multiplayerRooms: 0,
+      singleGames: 0,
+      updatedAt: Date.now(),
+    };
+  }
   const now = Date.now();
   const result = await evalCommandScript(
     'presence-stats-v1',
