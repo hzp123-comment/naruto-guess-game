@@ -49,14 +49,13 @@ router.get(
       players.map((p) => ({
         id: p.id,
         nickname: p.nickname,
-        nationality: p.nationality,
-        region: p.region,
-        team: p.team,
-        age: p.age,
-        role: p.role,
-        majorChampionships: p.major_championships,
-        majorAppearances: p.major_appearances,
-        isActive: Boolean(p.is_active),
+        village: p.village,
+        family_org: p.family_org,
+        rank: p.rank,
+        status: p.status,
+        eye_technique: p.eye_technique,
+        has_kekkei: Boolean(p.has_kekkei),
+        is_jinchuriki: Boolean(p.is_jinchuriki),
       }))
     );
   })

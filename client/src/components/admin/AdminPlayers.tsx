@@ -50,7 +50,8 @@ export default function AdminPlayers() {
       setPlayers(res.data.players.map((p) => ({
         ...p,
         difficulties: p.difficulties ?? [],
-        is_active: Boolean(p.is_active),
+        has_kekkei: Boolean(p.has_kekkei),
+        is_jinchuriki: Boolean(p.is_jinchuriki),
         is_enabled: Boolean(p.is_enabled),
       })));
       setTotal(res.data.total);
@@ -170,15 +171,14 @@ export default function AdminPlayers() {
 
   const columns: Column<AdminPlayer>[] = [
     { key: 'nickname', title: t('admin.nickname') },
-    { key: 'nationality', title: t('admin.nationality') },
-    { key: 'region', title: t('admin.region') },
-    { key: 'team', title: t('admin.team') },
-    { key: 'age', title: t('admin.age') },
-    { key: 'role', title: t('admin.role'), render: (p) => playerRoleLabel(p.role) },
-    { key: 'major_championships', title: t('admin.majorTitles') },
-    { key: 'major_appearances', title: t('admin.major') },
+    { key: 'village', title: t('admin.village') },
+    { key: 'family_org', title: t('admin.familyOrg') },
+    { key: 'rank', title: t('admin.rank') },
+    { key: 'status', title: t('admin.status') },
+    { key: 'eye_technique', title: t('admin.eyeTechnique') },
+    { key: 'has_kekkei', title: t('admin.hasKekkei'), render: (p) => (p.has_kekkei ? t('common.yes') : t('common.no')) },
+    { key: 'is_jinchuriki', title: t('admin.isJinchuriki'), render: (p) => (p.is_jinchuriki ? t('common.yes') : t('common.no')) },
     { key: 'difficulties', title: t('admin.difficulties'), render: (p) => p.difficulties.map((key) => difficultyLabel(t, key)).join(', ') },
-    { key: 'is_active', title: t('admin.status'), render: (p) => (p.is_active ? t('common.active') : t('common.retired')) },
     { key: 'is_enabled', title: t('admin.pool'), render: (p) => (p.is_enabled ? t('admin.available') : t('admin.disabled')) },
     {
       key: 'actions',

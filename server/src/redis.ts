@@ -196,7 +196,7 @@ export async function closeRedis(): Promise<void> {
     // Force-close all connections without waiting for QUIT replies.
     // Redis may be unreachable (local dev) — don't let quit() block forever.
     clients.forEach((client) => {
-      try { client.end(true); } catch { /* noop */ }
+      try { (client as any).end(true); } catch { /* noop */ }
     });
   }
   commandClient = null;

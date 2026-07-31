@@ -112,14 +112,13 @@ function replayAnswer(target: Player) {
   return {
     id: target.id,
     nickname: target.nickname,
-    team: target.team,
-    nationality: target.nationality,
-    region: target.region,
-    age: target.age,
-    role: target.role,
-    majorChampionships: target.major_championships,
-    majorAppearances: target.major_appearances,
-    isActive: Boolean(target.is_active),
+    village: target.village,
+    family_org: target.family_org,
+    rank: target.rank,
+    status: target.status,
+    eye_technique: target.eye_technique,
+    has_kekkei: Boolean(target.has_kekkei),
+    is_jinchuriki: Boolean(target.is_jinchuriki),
   };
 }
 
@@ -622,15 +621,14 @@ router.get(
     }
     const exportedPlayers = players.map((player) => ({
       nickname: String(player.nickname),
-      nationality: String(player.nationality),
-      region: String(player.region),
-      team: String(player.team),
-      age: Number(player.age),
-      role: String(player.role),
-      major_championships: Number(player.major_championships),
-      major_appearances: Number(player.major_appearances),
+      village: String(player.village),
+      family_org: String(player.family_org),
+      rank: String(player.rank),
+      status: String(player.status),
+      eye_technique: String(player.eye_technique),
+      has_kekkei: Boolean(player.has_kekkei),
+      is_jinchuriki: Boolean(player.is_jinchuriki),
       difficulties: difficultiesByPlayer.get(Number(player.id)) ?? [],
-      is_active: Boolean(player.is_active),
       is_enabled: Boolean(player.is_enabled),
     }));
     res.attachment('players.json').json(exportedPlayers);

@@ -141,14 +141,13 @@ function answerView(target: Player) {
   return {
     id: target.id,
     nickname: target.nickname,
-    team: target.team,
-    nationality: target.nationality,
-    region: target.region,
-    age: target.age,
-    role: target.role,
-    majorChampionships: target.major_championships,
-    majorAppearances: target.major_appearances,
-    isActive: Boolean(target.is_active),
+    village: target.village,
+    family_org: target.family_org,
+    rank: target.rank,
+    status: target.status,
+    eye_technique: target.eye_technique,
+    has_kekkei: Boolean(target.has_kekkei),
+    is_jinchuriki: Boolean(target.is_jinchuriki),
   };
 }
 

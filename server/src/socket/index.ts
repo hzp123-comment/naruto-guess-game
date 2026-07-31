@@ -172,12 +172,11 @@ function joinRoomChannels(socket: Socket, room: StoredRoom, identity: string): v
 }
 
 function visibleGuess(feedback: GuessFeedback) {
-  const { region: _region, ...attributes } = feedback.attributes;
-  return { ...feedback, attributes };
+  return { ...feedback };
 }
 
 function hiddenGuess(feedback: GuessFeedback) {
-  const hideAttribute = ({ level, hint }: GuessFeedback['attributes']['team']) => ({
+  const hideAttribute = ({ level, hint }: { level: string; hint?: string }) => ({
     level,
     ...(hint ? { hint } : {}),
   });
@@ -185,13 +184,13 @@ function hiddenGuess(feedback: GuessFeedback) {
     hidden: true as const,
     correct: feedback.correct,
     attributes: {
-      nationality: hideAttribute(feedback.attributes.nationality),
-      team: hideAttribute(feedback.attributes.team),
-      age: hideAttribute(feedback.attributes.age),
-      role: hideAttribute(feedback.attributes.role),
-      majorChampionships: hideAttribute(feedback.attributes.majorChampionships),
-      majorAppearances: hideAttribute(feedback.attributes.majorAppearances),
-      isActive: hideAttribute(feedback.attributes.isActive),
+      village: hideAttribute(feedback.attributes.village),
+      familyOrg: hideAttribute(feedback.attributes.familyOrg),
+      rank: hideAttribute(feedback.attributes.rank),
+      status: hideAttribute(feedback.attributes.status),
+      eyeTechnique: hideAttribute(feedback.attributes.eyeTechnique),
+      hasKekkei: hideAttribute(feedback.attributes.hasKekkei),
+      isJinchuriki: hideAttribute(feedback.attributes.isJinchuriki),
     },
   };
 }
@@ -218,14 +217,13 @@ function replayAnswer(target: Player) {
   return {
     id: target.id,
     nickname: target.nickname,
-    nationality: target.nationality,
-    region: target.region,
-    team: target.team,
-    age: target.age,
-    role: target.role,
-    majorChampionships: target.major_championships,
-    majorAppearances: target.major_appearances,
-    isActive: Boolean(target.is_active),
+    village: target.village,
+    family_org: target.family_org,
+    rank: target.rank,
+    status: target.status,
+    eye_technique: target.eye_technique,
+    has_kekkei: Boolean(target.has_kekkei),
+    is_jinchuriki: Boolean(target.is_jinchuriki),
   };
 }
 
@@ -403,11 +401,13 @@ function answerView(targetPlayerId: number | null) {
   return target
     ? {
         nickname: target.nickname,
-        team: target.team,
-        nationality: target.nationality,
-        role: target.role,
-        majorChampionships: target.major_championships,
-        majorAppearances: target.major_appearances,
+        village: target.village,
+        family_org: target.family_org,
+        rank: target.rank,
+        status: target.status,
+        eye_technique: target.eye_technique,
+        has_kekkei: Boolean(target.has_kekkei),
+        is_jinchuriki: Boolean(target.is_jinchuriki),
       }
     : null;
 }

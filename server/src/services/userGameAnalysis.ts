@@ -51,17 +51,16 @@ function numberFeedbackCode(guessValue: number, targetValue: number, closeRange:
 }
 
 function feedbackSignature(guess: Player, target: Player): number {
-  const nationality = guess.nationality === target.nationality
+  const village = guess.village === target.village
     ? 2
-    : guess.region && guess.region === target.region ? 1 : 0;
+    : 0;
   let signature = guess.id === target.id ? 1 : 0;
-  signature = signature * 3 + nationality;
-  signature = signature * 2 + (guess.team === target.team ? 1 : 0);
-  signature = signature * 5 + numberFeedbackCode(guess.age, target.age, 3);
-  signature = signature * 2 + (guess.role === target.role ? 1 : 0);
-  signature = signature * 5 + numberFeedbackCode(guess.major_championships, target.major_championships, 1);
-  signature = signature * 5 + numberFeedbackCode(guess.major_appearances, target.major_appearances, 1);
-  return signature * 2 + (Boolean(guess.is_active) === Boolean(target.is_active) ? 1 : 0);
+  signature = signature * 3 + village;
+  signature = signature * 2 + (guess.rank === target.rank ? 1 : 0);
+  signature = signature * 5 + (guess.status === target.status ? 1 : 0);
+  signature = signature * 5 + (guess.eye_technique === target.eye_technique ? 1 : 0);
+  signature = signature * 2 + (Boolean(guess.has_kekkei) === Boolean(target.has_kekkei) ? 1 : 0);
+  return signature * 2 + (Boolean(guess.is_jinchuriki) === Boolean(target.is_jinchuriki) ? 1 : 0);
 }
 
 function informationGain(

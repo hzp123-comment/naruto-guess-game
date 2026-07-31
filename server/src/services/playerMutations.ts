@@ -5,7 +5,6 @@ import { isKnownDifficultyKey } from '../difficulties';
 import { HttpError } from '../middleware/common';
 import { invalidatePlayerCache } from './playerCache';
 
-const playerRoles = ['Rifler', 'AWPer', 'Coach'] as const;
 const difficultyKeySchema = z.string().trim().regex(/^[a-z0-9][a-z0-9_-]{0,31}$/);
 const difficultyListSchema = z.array(difficultyKeySchema)
   .min(1)
@@ -14,14 +13,13 @@ const difficultyListSchema = z.array(difficultyKeySchema)
 
 export const playerSchema = z.object({
   nickname: z.string().trim().min(1).max(64),
-  nationality: z.string().trim().min(1).max(64),
-  region: z.string().trim().max(32).default(''),
-  team: z.string().trim().max(64).default(''),
-  age: z.number().int().min(10).max(100),
-  role: z.enum(playerRoles).default('Rifler'),
-  major_championships: z.number().int().min(0).default(0),
-  major_appearances: z.number().int().min(0).default(0),
-  is_active: z.boolean().default(true),
+  village: z.string().trim().min(1).max(64),
+  family_org: z.string().trim().max(256).default('[]'),
+  rank: z.string().trim().max(32).default('中忍'),
+  status: z.string().trim().max(32).default('存活'),
+  eye_technique: z.string().trim().max(32).default('无'),
+  has_kekkei: z.boolean().default(false),
+  is_jinchuriki: z.boolean().default(false),
   is_enabled: z.boolean().default(true),
   difficulties: difficultyListSchema.optional(),
 });
@@ -134,7 +132,6 @@ export async function importPlayers(
           ? [
             'normal',
             ...(is_easy ? ['easy'] : []),
-            ...(is_easy && player.major_championships > 0 ? ['beginner'] : []),
           ]
           : null)
         ?? (existingNames.has(player.nickname) ? null : ['normal']);
