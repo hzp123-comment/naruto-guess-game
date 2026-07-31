@@ -41,9 +41,13 @@ WORKDIR /app
 
 COPY --from=build --chown=node:node /runtime/server/node_modules ./server/node_modules
 COPY --from=build --chown=node:node /workspace/server/dist ./server/dist
+COPY --from=build --chown=node:node /workspace/server/scripts ./server/scripts
 COPY --from=build --chown=node:node /workspace/client/dist ./client/dist
 
 USER node
 EXPOSE 3000
 
-CMD ["node", "server/dist/index.js"]
+# prebuilds 有时在 hoisted 中路径不对；启动前 rebuild 一次保证原生绑定可用
+RUN cd server/node_modules/better-sqlite3 && (npm run install || echo "rebuild skipped") || echo "sqlite rebuild skipped, fallback to runtime check"
+
+CMD ["node", "server/scripts/bootstrap.js"]

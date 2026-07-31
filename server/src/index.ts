@@ -240,6 +240,16 @@ async function main() {
   }
   const stopSocket = setupSocket(io);
 
+  server.on('error', (err) => {
+    console.error('[server:listen-error]', err);
+  });
+  server.on('listening', () => {
+    const addr = server.address();
+    console.log('[server:listening]', addr ? JSON.stringify(addr) : 'unknown');
+  });
+  server.on('close', () => {
+    console.log('[server:close] HTTP server closed');
+  });
   server.listen(config.port, '0.0.0.0', () => {
     console.log(`[server] 弗一把服务已启动: http://localhost:${config.port}`);
     console.log(`[server] 局域网访问: http://10.29.138.171:${config.port}`);
