@@ -86,21 +86,24 @@ function withTimeout<T>(promise: Promise<T>, timeoutMs: number, onTimeout: () =>
 async function main() {
   validateProductionConfig();
   const stopRuntimeMonitor = startRuntimeMonitor();
-  console.log('[server] 正在初始化数据库结构');
-  await ensureSchema();
-  console.log('[server] 正在导入角色数据');
-  await seedPlayersIfEmpty();
-  await backfillEasyPlayers();
-  await backfillLegacyPlayerDifficulties();
-  console.log('[server] 正在验证数据库结构');
-  await assertDatabaseReady();
-  console.log('[server] 数据库结构验证通过');
-  const redisReady = await initRedis();
-  await initPlayerCache();
-  const stopMatchWorker = redisReady ? await initMatchResultWorker() : async () => undefined;
 
-  const app = express();
-  app.set('trust proxy', config.trustProxy ? 1 : false);
+  // 状态变量 - 提前声明,供中间件闭包使用
+  let shuttingDown = false;
+  let dbReady = false;
+
+  // CORS 辅助函数 - 提前定义,供 Express 和 Socket.IO 使用
+  const isDev = process.env.NODE_ENV !== 'production';
+  function isOriginAllowed(origin: string | undefined): boolean {
+    if (isDev || !origin) return true;
+    return config.corsOrigins.some((pattern) => {
+      if (pattern === origin) return true;
+      if (pattern.startsWith('*.')) {
+        const domain = pattern.slice(2);
+        return origin.endsWith(domain);
+      }
+      return false;
+    });
+  }
 
   // index.html 含内联脚本(主题开关、启动屏进度),CSP 不放开 unsafe-inline,
   // 而是从实际服务的 HTML 计算各内联脚本的 sha256 哈希加入 script-src
@@ -114,6 +117,27 @@ async function main() {
         (match) => `'sha256-${crypto.createHash('sha256').update(match[1], 'utf8').digest('base64')}'`
       )
     : [];
+
+  // ==================== 创建 Express 应用并注册所有中间件和路由 ====================
+  const app = express();
+  app.set('trust proxy', config.trustProxy ? 1 : false);
+
+  // 请求日志 - 放在所有中间件之前
+  app.use((req, _res, next) => {
+    console.log(`[request] ${req.method} ${req.url} from ${req.ip}`);
+    next();
+  });
+
+  // 健康检查端点 - 放在 helmet/cors 之前,确保 Render 端口探测能立刻得到响应
+  app.get('/api/health', (_req, res) =>
+    res.json({
+      ok: true,
+      ready: dbReady,
+      redis: isRedisAvailable() ? 'up' : 'degraded',
+      features: { leaderboard: config.showLeaderboard },
+      runtime: getRuntimeSnapshot(),
+    })
+  );
 
   app.use(helmet({
     contentSecurityPolicy: {
@@ -141,19 +165,7 @@ async function main() {
       },
     },
   }));
-  // CORS 配置：开发环境允许所有，生产环境根据配置
-  const isDev = process.env.NODE_ENV !== 'production';
-  function isOriginAllowed(origin: string | undefined): boolean {
-    if (isDev || !origin) return true;
-    return config.corsOrigins.some((pattern) => {
-      if (pattern === origin) return true;
-      if (pattern.startsWith('*.')) {
-        const domain = pattern.slice(2);
-        return origin.endsWith(domain);
-      }
-      return false;
-    });
-  }
+
   const corsOptions = {
     origin: isOriginAllowed,
     credentials: true,
@@ -161,6 +173,7 @@ async function main() {
   app.use(cors(corsOptions));
   app.use((req, res, next) => {
     if (shuttingDown) return res.status(503).json({ code: 'SERVER_SHUTTING_DOWN' });
+    if (!dbReady) return res.status(503).json({ code: 'SERVER_INITIALIZING' });
     if (!['GET', 'HEAD', 'OPTIONS'].includes(req.method)) {
       if (!isDev) {
         const origin = req.headers.origin;
@@ -171,14 +184,6 @@ async function main() {
     }
     next();
   });
-  app.get('/api/health', (_req, res) =>
-    res.json({
-      ok: true,
-      redis: isRedisAvailable() ? 'up' : 'degraded',
-      features: { leaderboard: config.showLeaderboard },
-      runtime: getRuntimeSnapshot(),
-    })
-  );
   app.use('/api', rateLimit({ name: 'api', limit: 600, windowSeconds: 60 }));
   app.use('/api/pow', rejectOversizedBody(16 * 1024), parseJsonOnce('16kb'));
   app.use('/api/pow', powRoutes);
@@ -219,25 +224,20 @@ async function main() {
 
   app.use(errorHandler);
 
+  // ==================== 创建 HTTP 服务器并立即开始监听 ====================
   const server = http.createServer(app);
   const io = new Server(server, { cors: { origin: isOriginAllowed, credentials: true } });
   app.set('io', io);
-  let shuttingDown = false;
+
   let shutdownPromise: Promise<void> | null = null;
   let adapterPubClient: ReturnType<typeof duplicateRedisClient> = null;
   let adapterSubClient: ReturnType<typeof duplicateRedisClient> = null;
+
   io.use((_socket, next) => {
     if (shuttingDown) return next(new Error('SERVER_SHUTTING_DOWN'));
     next();
   });
-  if (redisReady) {
-    adapterPubClient = duplicateRedisClient('socket-adapter-pub');
-    adapterSubClient = duplicateRedisClient('socket-adapter-sub');
-    if (adapterPubClient && adapterSubClient) {
-      await Promise.all([adapterPubClient.connect(), adapterSubClient.connect()]);
-      io.adapter(createAdapter(adapterPubClient, adapterSubClient));
-    }
-  }
+
   const stopSocket = setupSocket(io);
 
   server.on('error', (err) => {
@@ -250,17 +250,62 @@ async function main() {
   server.on('close', () => {
     console.log('[server:close] HTTP server closed');
   });
-  server.listen(config.port, '0.0.0.0', () => {
-    console.log(`[server] 弗一把服务已启动: http://localhost:${config.port}`);
-    console.log(`[server] 局域网访问: http://10.29.138.171:${config.port}`);
-    console.log(`[server] allowed origins: ${config.corsOrigins.join(', ')}`);
+
+  // 立即开始监听 - 不等待数据库初始化
+  await new Promise<void>((resolve, reject) => {
+    const onError = (err: Error) => {
+      reject(err);
+    };
+    server.once('error', onError);
+    server.listen(config.port, '0.0.0.0', () => {
+      server.off('error', onError);
+      console.log(`[server] 服务已启动(监听中): http://0.0.0.0:${config.port}`);
+      console.log(`[server] allowed origins: ${config.corsOrigins.join(', ')}`);
+      resolve();
+    });
   });
 
+  // 保活定时器 - 不调用 unref(),确保进程不会静默退出
+  const heartbeat = setInterval(() => {
+    const mem = process.memoryUsage();
+    console.log(`[heartbeat] pid=${process.pid} rss=${Math.round(mem.rss / 1024 / 1024)}MB heap=${Math.round(mem.heapUsed / 1024 / 1024)}MB ready=${dbReady}`);
+  }, 10_000);
+  // 注意: 不调用 heartbeat.unref() - 此定时器保持进程存活
+
+  // ==================== 异步初始化(数据库/Redis) - 在服务器监听后执行 ====================
+  console.log('[server] 正在初始化数据库结构');
+  await ensureSchema();
+  console.log('[server] 正在导入角色数据');
+  await seedPlayersIfEmpty();
+  await backfillEasyPlayers();
+  await backfillLegacyPlayerDifficulties();
+  console.log('[server] 正在验证数据库结构');
+  await assertDatabaseReady();
+  console.log('[server] 数据库结构验证通过');
+  const redisReady = await initRedis();
+  await initPlayerCache();
+  const stopMatchWorker = redisReady ? await initMatchResultWorker() : async () => undefined;
+
+  // Redis 适配器 - 在服务器已监听后设置
+  if (redisReady) {
+    adapterPubClient = duplicateRedisClient('socket-adapter-pub');
+    adapterSubClient = duplicateRedisClient('socket-adapter-sub');
+    if (adapterPubClient && adapterSubClient) {
+      await Promise.all([adapterPubClient.connect(), adapterSubClient.connect()]);
+      io.adapter(createAdapter(adapterPubClient, adapterSubClient));
+    }
+  }
+
+  dbReady = true;
+  console.log('[server] 初始化完成,服务就绪');
+
+  // ==================== 优雅退出处理 ====================
   const shutdown = async (signal: string): Promise<void> => {
     if (shutdownPromise) return shutdownPromise;
     shutdownPromise = (async () => {
       shuttingDown = true;
       console.log(`[server] 收到 ${signal},开始优雅退出`);
+      clearInterval(heartbeat);
       stopRuntimeMonitor();
       const serverClosed = new Promise<void>((resolve) => {
         server.close(() => resolve());
